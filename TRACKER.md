@@ -38,9 +38,9 @@ Legend: `[x]` done · `[ ]` not started · `[~]` partial
 - [x] Score rises with survival time (10 pts/sec)
 - [x] Spawn interval ramps 1.1s → 0.3s over 90s
 - [x] Fall speed ramps 4.5 → 13 units/sec over 90s
-- [ ] Score multiplier increases every 30s survived
-- [ ] High score saved between runs (PlayerPrefs)
-- [ ] High score shown on the game over screen
+- [x] Score multiplier increases every 30s survived (x1, x2, x3... with a pop on each step)
+- [x] High score saved between runs (PlayerPrefs)
+- [x] High score shown in the HUD and on the game over screen, with a NEW BEST callout
 
 ## Block 4 — Art and UI
 
@@ -80,7 +80,7 @@ Legend: `[x]` done · `[ ]` not started · `[~]` partial
 
 ## Suggested order
 
-1. Score multiplier + high score (Block 3) — small, finishes the scoring loop
-2. Power-ups (Block 5 + the two sprites in Block 4)
+1. ~~Score multiplier + high score (Block 3)~~ — done
+2. Power-ups (Block 5 + the two sprites in Block 4) — next
 3. Audio (Block 6)
 4. Build and balance (Block 7)
