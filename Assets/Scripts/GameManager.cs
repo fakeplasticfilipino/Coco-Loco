@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Header("Scene References")]
     public PlayerController player;
     public CoconutSpawner spawner;
+    public PowerUpSpawner powerUpSpawner;
 
     [Header("UI")]
     public Text scoreText;
@@ -100,6 +101,14 @@ public class GameManager : MonoBehaviour
         if (health <= 0) EndRun();
     }
 
+    public void CollectPowerUp(PowerUp.Kind kind)
+    {
+        if (isOver) return;
+
+        // Effects come in the next steps (mango speed boost, durian heal).
+        Debug.Log("Collected power-up: " + kind);
+    }
+
     void Begin()
     {
         health = startingHealth;
@@ -111,6 +120,7 @@ public class GameManager : MonoBehaviour
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
         if (player != null) player.ResetToStart();
         if (spawner != null) spawner.ResetSpawner();
+        if (powerUpSpawner != null) powerUpSpawner.ResetSpawner();
 
         RaiseMultiplier();
         DrawHearts();
@@ -151,6 +161,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(leftovers[i].gameObject);
         }
+
+        PowerUp[] pickups = FindObjectsByType<PowerUp>(FindObjectsSortMode.None);
+        for (int i = 0; i < pickups.Length; i++)
+        {
+            Destroy(pickups[i].gameObject);
+        }
+
         Begin();
     }
 

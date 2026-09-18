@@ -54,10 +54,10 @@ Legend: `[x]` done · `[ ]` not started · `[~]` partial
 
 ## Block 5 — Power-ups
 
-- [ ] Power-up spawner (random, rarer than coconuts)
+- [x] Power-up spawner (random, rarer than coconuts)
 - [ ] Mango: temporary speed boost, with a visible timer or tint
 - [ ] Durian: restores 1 health, capped at 3
-- [ ] Power-ups fall and despawn like coconuts
+- [x] Power-ups fall and despawn like coconuts
 
 ## Block 6 — Feedback and audio
 
